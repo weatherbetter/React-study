@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MyComponentClass from "./MyComponentClass";
+import MyComponentFunction from "./MyComponentFunction";
+
+function Lamp({ size, color }) {
+    return (
+        <div
+            style={{
+                width: size,
+                height: size,
+                borderRadius: size / 2,
+                backgroundColor: color,
+            }}
+        />
+    );
+}
+
+function TrafficLight({ size }) {
+    return (
+        <>
+            <Lamp size={size} color="red" />
+            <Lamp size={size} color="green" />
+            <Lamp size={size} color="yellow" />
+        </>
+    );
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <TrafficLight size={100} />
+        </>
+    );
 }
 
 export default App;
