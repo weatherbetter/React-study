@@ -1,11 +1,11 @@
 import "./App.css";
-import CommentList from "./comment/CommentList";
+import Todo from "./practice01/Todo";
+
 function App() {
     return (
         <>
-            <CommentList />
+            <Todo />
         </>
     );
 }
-
 export default App;
