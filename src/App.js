@@ -1,10 +1,10 @@
 import "./App.css";
-import Parent from "./practice03/Parent";
+import RefSample from "./practice06/RefSample";
 
 function App() {
     return (
         <>
-            <Parent />
+            <RefSample />
         </>
     );
 }
